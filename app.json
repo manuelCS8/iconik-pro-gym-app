@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Iconik Pro Gym",
+    "slug": "iconik-pro-gym",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E31C1F"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iconikprogym.app",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.iconikprogym.app",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "plugins": [
+      "expo-sqlite",
+      "@react-native-firebase/app",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "La aplicación necesita acceso a tus fotos para seleccionar imágenes de ejercicios.",
+          "cameraPermission": "La aplicación necesita acceso a la cámara para tomar fotos de ejercicios."
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.iconikprogym"
+        }
+      ]
+    ],
+    "jsEngine": "jsc",
+    "extra": {
+      "eas": {
+        "projectId": "53206c60-7c77-467d-8c33-878a04d8d9f2"
+      }
+    }
+  }
+}

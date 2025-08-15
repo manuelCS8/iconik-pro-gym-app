@@ -1,0 +1,49 @@
+{
+  "cli": {
+    "version": ">= 5.8.0"
+  },
+  "build": {
+    "development": {
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "buildConfiguration": "Debug",
+        "simulator": true,
+        "resourceClass": "m-medium"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "buildConfiguration": "Release",
+        "simulator": false,
+        "resourceClass": "m-medium"
+      }
+    },
+    "ios-simulator": {
+      "distribution": "internal",
+      "ios": {
+        "buildConfiguration": "Debug",
+        "simulator": true,
+        "resourceClass": "m-medium",
+        "image": "latest"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "buildConfiguration": "Release"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+} 
